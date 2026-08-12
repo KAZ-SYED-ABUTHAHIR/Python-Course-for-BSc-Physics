@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+<meta charset="UTF-8">
+<style>
+    @page {
+        size: A4;
+        margin: 20mm 15mm;
+        background-color: #FFFDF9;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    
+    body {
+        font-family: 'Nirmala UI', 'Mukta Malar', 'Latha', 'Segoe UI', Arial, sans-serif;
+        color: #333;
+        margin: 0;
+        padding: 0;
+        line-height: 1.6;
+        font-size: 11pt;
+        background-color: #FFFDF9;
+    }
+    
+    .header {
+        background-color: #8A3324;
+        color: #FFFFFF;
+        padding: 30px 15mm;
+        text-align: center;
+        margin-bottom: 20px;
+        border-bottom: 5px solid #D97C2B;
+        margin-top: -20mm;
+        margin-left: -15mm;
+        margin-right: -15mm;
+    }
+    
+    .header h1 {
+        margin: 0;
+        font-size: 22pt;
+        letter-spacing: 1px;
+    }
+    
+    .header p {
+        margin: 5px 0 0 0;
+        font-size: 12pt;
+        color: #F3E0C8;
+    }
+
+    .container {
+        padding: 0 5mm;
+    }
+
+    .analogy-box {
+        background-color: #F8EDD8;
+        border: 2px solid #D97C2B;
+        padding: 15px 20px;
+        border-radius: 6px;
+        margin-bottom: 20px;
+    }
+    
+    .analogy-box h2 {
+        color: #8A3324;
+        margin-top: 0;
+        font-size: 14pt;
+        border-bottom: 1px dashed #D97C2B;
+        padding-bottom: 5px;
+    }
+
+    .section {
+        margin-bottom: 20px;
+        page-break-inside: auto;
+    }
+
+    .section-title {
+        color: #8A3324;
+        font-size: 14pt;
+        border-left: 4px solid #D97C2B;
+        padding-left: 10px;
+        margin-bottom: 10px;
+        page-break-after: avoid;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 15px 0;
+        background-color: #FFFFFF;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        border: 1px solid #E5D5C1;
+    }
+    th, td {
+        border: 1px solid #E5D5C1;
+        padding: 12px;
+        text-align: left;
+        vertical-align: top;
+    }
+    th {
+        background-color: #F8EDD8;
+        color: #8A3324;
+        font-weight: bold;
+    }
+
+    .code {
+        background-color: #2D2D2D;
+        color: #E0E2E4;
+        padding: 12px 15px;
+        border-radius: 4px;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 10pt;
+        margin: 10px 0;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+        border-left: 4px solid #D97C2B;
+        page-break-inside: avoid;
+    }
+
+    .keyword { color: #93C763; }
+    .string { color: #EC7600; }
+    .function { color: #FFC66D; }
+    .comment { color: #7D8C93; font-style: italic; }
+
+    .highlight-box {
+        background-color: #E9F2E6;
+        border-left: 4px solid #6A8E5C;
+        padding: 12px 15px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        page-break-inside: avoid;
+    }
+
+</style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>பைதான் நிரலாக்கம்: அடிப்படைகள் முதல் வல்லுநர் வரை</h1>
+        <p>இயற்பியல் துறை | டாக்டர் சாகிர் உசேன் கல்லூரி, இளையான்குடி | பயிற்றுவிப்பாளர்: Dr. KAZ</p>
+    </div>
+
+    <div class="container">
+        <div class="analogy-box">
+            <h2>சமையலறை ஒப்பீடு (Cooking Analogy)</h2>
+            <p>பைதான் நிரலாக்க சமையலறைக்கு வரவேற்கிறோம்! தென்னிந்திய உணவுகளின் சுவைகளை முழுமையாக அறிய, எப்படி பல்வேறு மூலப்பொருட்கள் மற்றும் சமையல் முறைகளின் தொடர்பைப் புரிந்து கொள்ள வேண்டுமோ, அதே போல பைத்தானில் சிறந்து விளங்கச் <strong>செயலிகள் (Operators) மற்றும் கோவைகளை (Expressions)</strong> ஆழமாகப் புரிந்து கொள்வது அவசியம்.</p>
+            <p>பைத்தானில், <em>செயலேற்பிகள் (Operands)</em> என்பவை அரிசி, பருப்பு, புளி, மசாலா போன்ற மூலப்பொருட்களாகும்; <em>செயலிகள் (Operators)</em> என்பவை நறுக்குதல், கலக்குதல், கொதிக்க வைத்தல், தாளித்தல் போன்ற செயல்களாகும். மூலப்பொருட்களையும் செயல்களையும் சேர்த்து ஒரு உணவை உருவாக்குவதே <em>கோவை (Expression)</em> எனப்படும்.</p>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">1. எண் கணிதச் செயலிகள் (Arithmetic Operators)</h2>
+            <p>இவை கணிதச் செயல்பாடுகளைச் செய்கின்றன. நமது சமையலறையில், இது மூலப்பொருட்களைத் தயார் செய்யும் உடல்ரீதியான செயல்களைக் குறிக்கிறது.</p>
+            <table>
+                <tr>
+                    <th>செயலி</th>
+                    <th>பைதான் உதாரணம்</th>
+                    <th>சமையல் ஒப்பீடு</th>
+                </tr>
+                <tr>
+                    <td><strong>+ (கூட்டல்)</strong></td>
+                    <td><code>rice + dal</code></td>
+                    <td>இட்லி மாவுக்கு 4 கப் அரிசியுடன் 1 கப் உளுத்தம்பருப்பைக் கலப்பது.</td>
+                </tr>
+                <tr>
+                    <td><strong>- (கழித்தல்)</strong></td>
+                    <td><code>chillies - 2</code></td>
+                    <td>சாம்பார் அதிக காரமாகாமல் இருக்க சில காய்ந்த மிளகாய்களைக் குறைப்பது.</td>
+                </tr>
+                <tr>
+                    <td><strong>* (பெருக்கல்)</strong></td>
+                    <td><code>recipe * 5</code></td>
+                    <td>5 பேருக்கு பரிமாற ஃபில்டர் காபி செய்முறையை 5 மடங்கு அதிகரிப்பது.</td>
+                </tr>
+                <tr>
+                    <td><strong>/ (வகுத்தல்)</strong></td>
+                    <td><code>payasam / 4</code></td>
+                    <td>ஒரு பானை பாயசத்தை 4 கிண்ணங்களில் சமமாகப் பிரிப்பது.</td>
+                </tr>
+                <tr>
+                    <td><strong>// (முழு எண்)</strong></td>
+                    <td><code>idlis // 2</code></td>
+                    <td>முழு இட்லிகளைப் பரிமாறுதல். 5 இட்லிகள், 2 நபர்கள் எனில் ஒவ்வொருவருக்கும் தலா 2 முழு இட்லிகள்.</td>
+                </tr>
+                <tr>
+                    <td><strong>% (மீதி)</strong></td>
+                    <td><code>idlis % 2</code></td>
+                    <td>மீதமுள்ளவை! சமமாகப் பகிர்ந்த பின் தட்டில் மீதமுள்ள 1 இட்லி.</td>
+                </tr>
+                <tr>
+                    <td><strong>** (அடுக்கு)</strong></td>
+                    <td><code>spice_level ** 2</code></td>
+                    <td>காரச் சட்னியில் கூடுதல் குண்டூர் மிளகாய் சேர்ப்பதால் ஏற்படும் காரத்தின் அடுக்கு அதிகரிப்பு.</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="section" style="page-break-before: always;">
+            <h2 class="section-title">2. ஒப்பீட்டுச் செயலிகள் (Relational Operators)</h2>
+            <p>இவை இரண்டு மதிப்புகளை ஒப்பிட்டு, விடையை பூலியன் (<code>True</code> அல்லது <code>False</code>) வடிவில் தரும். சமையலில், எல்லாம் சரியாக உள்ளதா எனத் தொடர்ந்து ருசி பார்ப்பது மற்றும் சரிபார்ப்பது இதற்குச் சமம்.</p>
+            
+            <div class="highlight-box">
+                <strong>தாளிப்பு சோதனை (Tempering Test):</strong> தாளிக்கும் போது, கடுகு சேர்ப்பதற்கு முன் எண்ணெய் சரியான சூட்டில் இருக்க வேண்டும். <code>oil_temp &gt;= 180</code> ஆக இருந்தால், கடுகு சரியாக வெடிக்கும் (True). <code>oil_temp &lt; 180</code> ஆக இருந்தால், அவை வெடிக்காமல் கசப்பாக மாறிவிடும் (False).
+            </div>
+
+            <ul>
+                <li><code>==</code> (சமம்): <code>salt_level == "perfect"</code> (ரசத்தின் சுவை சரியாக உள்ளதா?)</li>
+                <li><code>!=</code> (சமமில்லை): <code>chutney_color != "burnt"</code> (தேங்காய் அளவுக்கதிகமாக வறுபடாமல் உள்ளதா?)</li>
+                <li><code>&gt;</code> / <code>&lt;</code> (பெரியது / சிறியது): <code>boiling_time &gt; 15</code> (பச்சை வாசனை போகும் வரை சாம்பார் கொதித்துவிட்டதா?)</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">3. தர்க்கச் செயலிகள் (Logical Operators)</h2>
+            <p>தர்க்கச் செயலிகள் (<code>and</code>, <code>or</code>, <code>not</code>) பல நிபந்தனைகளை இணைக்கப் பயன்படுகின்றன.</p>
+            <div class="code">
+<span class="comment"># Logical AND: ஃபில்டர் காபி செய்ய, டிகாக்ஷன் மற்றும் சூடான பால் இரண்டும் தேவை.</span>
+has_decoction = <span class="keyword">True</span>
+has_milk = <span class="keyword">True</span>
+can_make_coffee = has_decoction <span class="keyword">and</span> has_milk 
+
+<span class="comment"># Logical OR: காலை உணவுக்கு இட்லி அல்லது தோசை பரிமாறலாம்.</span>
+breakfast_ready = has_idli_batter <span class="keyword">or</span> has_dosa_batter
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">4. மதிப்பிருத்துச் செயலிகள் (Assignment Operators)</h2>
+            <p>மாறிகளுக்கு மதிப்புகளை ஒதுக்க இவை பயன்படுகின்றன. தற்போதைய மதிப்பின் அடிப்படையில் மாறியைப் புதுப்பிக்க கூட்டு மதிப்பிருத்துச் செயலிகள் (Compound operators) பயன்படுகின்றன.</p>
+            <div class="code">
+<span class="comment"># சாம்பாரைச் சரிசெய்தல்</span>
+water_ml = <span class="string">500</span>      <span class="comment"># பாத்திரத்தில் 500மிலி தண்ணீர் ஊற்றுதல்</span>
+water_ml += <span class="string">100</span>     <span class="comment"># மேலும் 100மிலி தண்ணீர் சேர்த்தல்</span>
+stock_tamarind -= <span class="string">1</span> <span class="comment"># அஞ்சறைப் பெட்டியிலிருந்து எலுமிச்சை அளவு புளியை எடுத்தல்</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">5. கோவைகள் (Expressions)</h2>
+            <p>பைதான் நிரலாக்கத்தில் மாறிகள், மதிப்புகள் மற்றும் செயலிகள் இணைந்து மற்றொரு மதிப்பை உருவாக்குவதே கோவையாகும். இது ஒரு முழுமையான செய்முறைப் படியாகும்.</p>
+            <div class="code">
+<span class="comment"># மசால் தோசையின் மொத்த கலோரிகளைக் கணக்கிடுதல்</span>
+total_calories = dosa_cal + masala_cal + (chutney_cal * <span class="string">2</span>) + (ghee_tbsp * <span class="string">120</span>)
+            </div>
+            <p>மேற்கண்ட கோவையில், பைதான் செயல்பாடுகளின் வரிசையை (PEMDAS) கடுமையாகப் பின்பற்றுகிறது. எண்ணெய் சூடாகும் முன் தாளிக்கக் கூடாதது போல, பைதான் கூட்டலுக்கு (<code>+</code>) முன்பாக பெருக்கலை (<code>*</code>) செய்கிறது. இதன் மூலம் மொத்த கலோரிகள் சரியாகக் கணக்கிடப்படுகிறது.</p>
+            
+            <p style="text-align: center; margin-top: 30px; font-style: italic; color: #8A3324; font-size: 12pt; border-top: 1px dashed #D97C2B; padding-top: 20px;">
+                "இந்த அடிப்படைச் செயலிகளைக் கற்றுக்கொள்வதன் மூலம், ஒரு சிறந்த சமையல்கலைஞர் தென்னிந்திய உணவில் எவ்வாறு சுவையையும் சமநிலையையும் கொண்டு வருகிறாரோ, அதே போல் உங்கள் நிரலில் துல்லியமான தர்க்கத்தை உங்களால் உருவாக்க முடியும். ஹேப்பி கோடிங்!"
+            </p>
+        </div>
+    </div>
+</body>
+</html>
